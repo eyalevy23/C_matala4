@@ -173,24 +173,6 @@ void delete_edge(pnode item, int endpoint){
 
 
 
-
-
-// pnode findMinNotVisited(pnode head)
-// {
-//     int min = __INT_MAX__;
-//     pnode result = NULL;
-//     while (head)
-//     {
-//         if (!head->visited && head->distance < min)
-//         {
-//             min = head->distance;
-//             result = head;
-//         }
-//         head = head->next;
-//     }
-//     return result;
-// }
-
 pnode min_unvisted(pnode head){
     pnode current = head, minNode = NULL;
     int minDist = __INT_MAX__;
@@ -202,8 +184,6 @@ pnode min_unvisted(pnode head){
     }
     return minNode;
 }
-
-
 
 
 int dijkstra(pnode head, int fromID, int toID) {
@@ -220,7 +200,6 @@ int dijkstra(pnode head, int fromID, int toID) {
         current = current->next;
     }
 
-    // running dijkstra's algorithm
     current = find_node(head, fromID);
     while (current) {
         current->visited = 1;
