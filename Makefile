@@ -3,7 +3,7 @@ CC=gcc
 AR = ar
 FLAGS= -Wall -g
 
-all: mains
+all: graph
 
 dijkstrasAlgorithm.o: dijkstrasAlgorithm.c
 	$(CC) $(Flags) -fPIC -c dijkstrasAlgorithm.c 
@@ -20,12 +20,12 @@ nodes.o: nodes.c
 main.o: main.c
 	$(CC) $(Flags) -fPIC -c main.c 
 
-mains : dijkstrasAlgorithm.o edges.o graph.o nodes.o main.o
-	$(CC) $(FLAGS) -o mains main.o edges.o nodes.o dijkstrasAlgorithm.o graph.o
+graph : dijkstrasAlgorithm.o edges.o graph.o nodes.o main.o
+	$(CC) $(FLAGS) -o graph main.o edges.o nodes.o dijkstrasAlgorithm.o graph.o
 
 clean: 
-	rm -f  *.o  *.a *.so mains
+	rm -f  *.o  *.a *.so graph
 
 run : 
-	./mains < input1.txt
+	./graph < input1.txt
 	
