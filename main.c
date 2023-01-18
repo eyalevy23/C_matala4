@@ -37,6 +37,12 @@ int main()
             int s = shortsPath_cmd(head, pairs1, pairs2);
             printf("Dijsktra shortest path: %d\n", s);
         }
+        else if(letter == 'T'){
+            scanf("%d", &num);
+            for(int i = 0; i<num; i++){
+                scanf("%d", &pairs1);
+            }
+        }
         else if(letter == 'n'){
             scanf("%d", &num);
 
