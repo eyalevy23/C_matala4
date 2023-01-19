@@ -34,7 +34,16 @@ int main()
         }
         else if(letter == 'S'){
             scanf("%d %d", &pairs1, &pairs2);        
-            int s = shortsPath_cmd(head, pairs1, pairs2);
+            int s1 = shortsPath_cmd(head, pairs1, pairs2);
+            int s2 = shortsPath_cmd(head, pairs2, pairs1);
+            int s =0;
+            if(s1 == -1 && s2 == -1){
+                s = -1;
+            }else if(s1 != -1 && s2 != -1){
+                s = min(s1, s2);
+            } else{
+                s = max(s1, s2);
+            }
             printf("Dijsktra shortest path: %d \n", s);
         }
         else if(letter == 'T'){
