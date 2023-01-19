@@ -2,8 +2,8 @@
 #include<ctype.h>
 #include "graph.h"
 #include <stdlib.h>
-
-
+ 
+  
 int main() 
 {
     int num = 0;
