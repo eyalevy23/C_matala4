@@ -3,6 +3,7 @@
 
 #ifndef GRAPH_
 #define GRAPH_
+#define INF __INT_MAX__
 
 
 typedef struct GRAPH_NODE_ *pnode;
@@ -37,14 +38,11 @@ void fill_edge_in_node(pnode* head, int fromID, int toID, int weight);
 pedge create_edge(int weight, pnode endpoint);
 void init(pnode* head, int numNodes);
 void delete_edge(pnode item, int endpoint);
-// void delete_node(pnode head, int numndoe);
 pnode min_unvisted(pnode *head);
-// void build_node(pnode head, int numNode);
 void free_edges(pnode item);
-// int dijkstra(pnode head, int startID, int endID);
 int graph_size(pnode *head);
 void rest(pnode *head);
-
+int max2(int a, int b, int c);
 
 void swap(int *a, int *b);
 void reverse(int *begin, int *end);
