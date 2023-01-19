@@ -9,19 +9,10 @@ void build_graph_cmd(pnode* head,  int numNodes) {
         deleteGraph_cmd(head);
     }
     init(head, numNodes);
-
-    // fill_edge_in_node(head, 0, 2, 5);
-    // fill_edge_in_node(head, 0, 3, 3);
-    // fill_edge_in_node(head, 2, 0, 4);
-    // fill_edge_in_node(head, 2, 1, 1);
-    // fill_edge_in_node(head, 1, 3, 7);
-    // fill_edge_in_node(head, 1, 0, 2);
-    // delete_node(head, 0);
-    // int res = dijkstra(head, 2, 3);
-    // printf("end");
 }
 
 void deleteGraph_cmd(pnode *head) {
+    rest(head);
     pnode curr = *head;
     while (curr)
     {
@@ -30,7 +21,7 @@ void deleteGraph_cmd(pnode *head) {
         free_edges(delNode);
         free(delNode);
     }
-    
+    *head = NULL;
 }
 
 void init(pnode* head, int numNodes) {
@@ -40,6 +31,7 @@ void init(pnode* head, int numNodes) {
         pnode item = (pnode)malloc(sizeof(node));
         item->node_num = i;
         item->edges = NULL;
+        item->next = NULL;
         if(*head == NULL){
             *head  = item;            
         }

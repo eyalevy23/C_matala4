@@ -43,6 +43,7 @@ pnode min_unvisted(pnode *head);
 void free_edges(pnode item);
 // int dijkstra(pnode head, int startID, int endID);
 int graph_size(pnode *head);
+void rest(pnode *head);
 
 
 void swap(int *a, int *b);

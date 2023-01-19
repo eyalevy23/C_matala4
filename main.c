@@ -55,5 +55,6 @@ int main()
         scanf(" %c", &letter);
 
     }
+    deleteGraph_cmd(head);
     return 0;
 }
