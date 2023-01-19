@@ -33,7 +33,7 @@ void deleteGraph_cmd(pnode *head) {
     
 }
 
-pnode init(pnode* head, int numNodes) {
+void init(pnode* head, int numNodes) {
     pnode prev = NULL;
     for(int i = 0; i<numNodes; i++)
     {

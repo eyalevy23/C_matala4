@@ -19,7 +19,7 @@ int main()
         }
         else if(letter == 'B'){
             scanf("%d", &num);
-            scanf(" %c", &letter);
+            insert_node_cmd(head, num);
             while (scanf(" %c", &letter) && !isalpha(letter))
             {
                 pairs1 = letter - '0';
@@ -38,10 +38,8 @@ int main()
             printf("Dijsktra shortest path: %d\n", s);
         }
         else if(letter == 'T'){
-            scanf("%d", &num);
-            for(int i = 0; i<num; i++){
-                scanf("%d", &pairs1);
-            }
+            int res = TSP_cmd(head);
+            printf("TSP shortest path: %d\n", res);
         }
         else if(letter == 'n'){
             scanf("%d", &num);

@@ -67,6 +67,9 @@ int shortsPath_cmd(pnode *head, int fromID, int toID) {
         current = min_unvisted(head);
     }
     // Return the shortest path distance from the source to the destination
+    if(shortest_paths[toID] == __INT_MAX__){
+        shortest_paths[toID] = -1;
+    }
     return shortest_paths[toID];
 
 }
