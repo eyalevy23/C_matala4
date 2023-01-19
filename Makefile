@@ -30,5 +30,5 @@ clean:
 	rm -f  *.o  *.a *.so graph
 
 run : clean all
-	./graph < input1.txt
+	./graph < input1.txt > out.txt
 	

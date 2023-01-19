@@ -35,11 +35,11 @@ int main()
         else if(letter == 'S'){
             scanf("%d %d", &pairs1, &pairs2);        
             int s = shortsPath_cmd(head, pairs1, pairs2);
-            printf("Dijsktra shortest path: %d\n", s);
+            printf("Dijsktra shortest path: %d \n", s);
         }
         else if(letter == 'T'){
             int res = TSP_cmd(head);
-            printf("TSP shortest path: %d\n", res);
+            printf("TSP shortest path: %d \n", res);
         }
         else if(letter == 'n'){
             scanf("%d", &num);
